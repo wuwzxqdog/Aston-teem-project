@@ -12,6 +12,13 @@ public class Car {
         this.model = builder.model;
         this.year = builder.year;
     }
+    public static Car createNewCar(String model, String year, String power) {
+        return new Builder ()
+                .model(model)
+                .power(Integer.parseInt(power))
+                .year(Integer.parseInt(year))
+                .build();
+    }
     public int getPower() {
         return power;
     }
